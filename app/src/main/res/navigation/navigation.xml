@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login2">
+    <fragment
+        android:id="@+id/login2"
+        android:name="com.example.myshoestore.Login"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_login2_to_onBoarding1"
+            app:destination="@id/onBoarding1"
+            app:popUpTo="@id/shoplist2" />
+        <action
+            android:id="@+id/action_login2_to_shoplist2"
+            app:destination="@id/shoplist2" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding1"
+        android:name="com.example.myshoestore.OnBoarding1"
+        android:label="OnBoarding1" >
+        <action
+            android:id="@+id/action_onBoarding1_to_onBoarding2"
+            app:destination="@id/onBoarding2" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding2"
+        android:name="com.example.myshoestore.OnBoarding2"
+        android:label="OnBoarding2" >
+        <action
+            android:id="@+id/action_onBoarding2_to_shoplist2"
+            app:destination="@id/shoplist2" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoplist2"
+        android:name="com.example.myshoestore.shoplist"
+        android:label="shoplist" >
+        <action
+            android:id="@+id/action_shoplist2_to_shopdetails"
+            app:destination="@id/shopdetails" />
+        <action
+            android:id="@+id/action_shoplist2_to_login2"
+            app:destination="@id/login2"
+            app:popUpTo="@id/login2" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopdetails"
+        android:name="com.example.myshoestore.shopdetails"
+        android:label="shopdetails" >
+        <action
+            android:id="@+id/action_shopdetails_to_shoplist2"
+            app:destination="@id/shoplist2" />
+    </fragment>
+</navigation>
